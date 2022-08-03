@@ -219,6 +219,10 @@
         object-fit: cover;
         height: 500px;
 
+        @media only screen and (max-width: 768px) {
+            height: 450px;
+        }
+
         @media only screen and (max-width: 600px) {
             height: 250px;
         }
@@ -241,10 +245,15 @@
     .card__paragraph {
         @media only screen and (max-width: 990px) {
             margin: 0 auto;
+            max-width: 65%;
             margin-top: var(--span-s);
             text-align: center;
             font-size: var(--size-s);
             font-weight: var(--weight-md);
+        }
+
+        @media only screen and (max-width: 600px) {
+            max-width: 100%;
         }
     }
 }

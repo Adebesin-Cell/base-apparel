@@ -261,6 +261,11 @@ body {
      object-fit: cover;
   height: 500px;
 }
+@media only screen and (max-width: 768px) {
+  .card__mobile__image {
+    height: 450px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .card__mobile__image {
     height: 250px;
@@ -281,9 +286,15 @@ body {
 @media only screen and (max-width: 990px) {
   .card__mobile .card__paragraph {
     margin: 0 auto;
+    max-width: 65%;
     margin-top: var(--span-s);
     text-align: center;
     font-size: var(--size-s);
     font-weight: var(--weight-md);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card__mobile .card__paragraph {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
