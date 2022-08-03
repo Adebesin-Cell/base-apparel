@@ -3,26 +3,56 @@
 }
 
 .wrapper {
-    max-height: 100vh;
     overflow: hidden;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: 60% 100%;
+
+    @media only screen and (max-width: 990px) {
+        background-size: cover;
+        overflow: visible;
+    }
 }
 
 .card {
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+
+    @media only screen and (max-width: 990px) {
+        display: none;
+    }
+
     &__image--box {
         display: flex;
+
+        @media only screen and (max-width: 990px) {
+            order: -1;
+        }
     }
 
     &__image {
         width: 100%;
         display: block;
-        height: 100%;
         object-fit: cover;
+
+        &--mobile {
+            height: 100%;
+            display: none;
+
+            @media only screen and (max-width: 990px) {
+                display: block;
+            }
+        }
+
+        &--desktop {
+            height: 100%;
+
+            @media only screen and (max-width: 990px) {
+                display: none;
+            }
+        }
     }
 
     &__logo {
@@ -54,6 +84,16 @@
         letter-spacing: 15px;
         color: var(--dark-grayish-red);
 
+        @media only screen and (max-width: 1140px) {
+            font-size: calc(var(--size-2xl));
+            letter-spacing: 10px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            font-size: calc(var(--size-xl) + 4px);
+            letter-spacing: 13px;
+        }
+
         &--colored {
             color: var(--soft-red);
             font-weight: var(--weight-xsm) !important;
@@ -71,6 +111,16 @@
         padding-top: calc(var(--span-2xl) + var(--span-xs));
         padding-left: calc(2 * var(--span-2xl) + var(--span-s));
         padding-right: calc(2 * var(--span-2xl) + var(--span-s));
+
+        @media only screen and (max-width: 1200px) {
+            padding-left: calc(var(--span-2xl) + var(--span-xl));
+            padding-right: calc(var(--span-2xl) + var(--span-xl));
+        }
+
+        @media only screen and (max-width: 1024px) {
+            padding-left: calc(var(--span-2xl));
+            padding-right: calc(var(--span-2xl));
+        }
     }
 
     &__paragraph {
@@ -81,6 +131,10 @@
         text-align: left;
         color: var(--desaturated-red);
         max-width: 95%;
+
+        @media only screen and (max-width: 1024px) {
+            font-size: var(--size-s);
+        }
     }
 
     &__form {
@@ -135,6 +189,62 @@
 
         &:hover {
             transform: translateX(20px);
+        }
+    }
+}
+
+.card__mobile {
+    min-height: 100vh;
+    display: none;
+
+    @media only screen and (max-width: 990px) {
+        display: block;
+    }
+
+    &__header {
+        padding: var(--span-l);
+
+        @media only screen and (max-width: 600px) {
+            padding: var(--span-m);
+        }
+    }
+
+    &__image--box {
+        display: flex;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+
+        @media only screen and (max-width: 600px) {
+            height: 250px;
+        }
+    }
+
+    &__body {
+        padding: var(--span-m);
+    }
+
+    .card__heading {
+        @media only screen and (max-width: 990px) {
+            margin: 0 auto;
+            margin-top: var(--span-s);
+            text-align: center;
+            font-size: var(--size-xl);
+            font-weight: var(--weight-lg);
+        }
+    }
+
+    .card__paragraph {
+        @media only screen and (max-width: 990px) {
+            margin: 0 auto;
+            margin-top: var(--span-s);
+            text-align: center;
+            font-size: var(--size-s);
+            font-weight: var(--weight-md);
         }
     }
 }

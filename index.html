@@ -16,6 +16,7 @@
 <body>
   <div class="container">
     <div class="wrapper">
+      <!-- desktop view -->
       <div class="card">
         <div class="card__content">
           <div class="card__logo">
@@ -54,7 +55,49 @@
           </div>
         </div>
         <div class="card__image--box">
-          <img src="./images/hero-desktop.jpg" alt="hero-desktop" class="card__image">
+          <img src="./images/hero-desktop.jpg" alt="hero-desktop" class="card__image card__image--desktop">
+
+        </div>
+      </div>
+      <!-- mobile view -->
+      <div class="card__mobile">
+        <div class="card__mobile__header">
+          <div class="card__logo">
+            <a href="" class="card__logo--link">
+              <img src="./images/logo.svg" alt="logo" class="card__logo-image">
+            </a>
+          </div>
+
+        </div>
+        <div class="card__mobile__image--box">
+          <img src="./images/hero-mobile.jpg" alt="hero-mobile" class="card__mobile__image">
+        </div>
+        <div class="card__mobile__body">
+          <h1 class="card__heading">
+            <span class="card__heading--colored">
+              We're
+            </span>
+            <span>
+              coming
+            </span>
+            <span>
+              soon
+            </span>
+          </h1>
+          <p class="card__paragraph">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <form action="" class="card__form" autocomplete="off">
+            <div class="card__group">
+              <input type="text" class="card__input" name="email" placeholder="Email Address" autocomplete="off">
+              <button class="card__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                  <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
